@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>toggle</title>
+	</head>
+	<body>
+		<style>
+            input.input_toggle_with_text_cls {
+				position: absolute;
+				left: -3000%;
+			}
+			input.input_toggle_with_text_cls + label {
+				overflow: hidden;
+				display: inline-block;
+				position: relative;
+				width: 72px;
+				height: 30px;
+				background: #d1d1d1;
+				border-radius: 30px;
+				transition: all 0.5s;
+			}
+			input.input_toggle_with_text_cls + label:before {
+				content: '미사용';
+                font-size: 12px;
+				position: absolute;
+				right: 3px;
+				top: 2px;
+				width: 26px;
+				height: 26px;
+				background: #ffffff;
+				border-radius: 30px;
+				line-height: 26px;
+				text-indent: -37px;
+				color: #fff;
+				transition: all 0.5s;
+			}
+			input.input_toggle_with_text_cls:checked + label:before {
+				right: 44px;
+				background: #fff;
+			}
+			input.input_toggle_with_text_cls:checked + label {
+				background: #00bd18;
+			}
+			input.input_toggle_with_text_cls + label:after {
+				content: '사용';
+                font-size: 12px;
+				position: absolute;
+				right: -100px;
+				top: 2px;
+				color: #fff;
+				line-height: 26px;
+				transition: all 0.5s;
+			}
+			input.input_toggle_with_text_cls:checked + label:after {
+				right: 12px;
+			}
+		</style>
+
+		<input type="checkbox" id="input_toggle_with_text_cls" class="input_toggle_with_text_cls" /><label for="input_toggle_with_text_cls"></label>
+	</body>
+</html>
